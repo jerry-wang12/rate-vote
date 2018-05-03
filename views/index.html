@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+    <title>投票页</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/jquery.raty.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+
+</head>
+
+<body>
+    <div class="container-fluid pb10">
+        <!-- 文章缩略图 -->
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <div class="thumbnail">
+                    <img src="/database/images/clean_code.jpg" alt="Clean Code学习分享">
+                    <div class="caption text-center">
+                        <h3>Clean Code学习分享</h3>
+                        <p>By 王贤希</p>
+                        <p>2018年05月03日18:20 ~ 19:30</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form class="form" action="">
+            <div class="form-group">
+                <label for="download">下载ppt文件</label>
+                <div class="download">
+                    <!-- 下载PPT文件 -->
+                    <a href="/database/ppts/CleanCode_wang.xianxi.pptx" download="clean_code_jerry.pptx">
+                        <button type="button" class="btn btn-default">clean_code_jerry.pptx</button>
+                    </a>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="rate-average">已经有
+                    <span class="rate-count">0</span>人评分</label>
+                <!-- 已打评分 -->
+                <div class="rate-average"></div>
+            </div>
+            <div class="form-group">
+                <label for="rate">你的评分</label>
+                <!-- 已打评分 -->
+                <div class="rate"></div>
+            </div>
+            <div class="form-group">
+                <label for="comments">短评</label>
+                <textarea class="form-control" rows="3" name="comments"></textarea>
+            </div>
+            <div class="btn-group pull-right">
+                <!-- 提交按钮 -->
+                <button type="button" class="btn btn-primary js-submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
+<script type="text/html" id="ppt-info">
+    <div class="col-xs-12 col-md-12">
+        <div class="thumbnail">
+            <img src="/database/images/clean_code.jpg" alt="{{name}}">
+            <div class="caption text-center">
+                <h3>{{name}}</h3>
+                <p>By {{author}}</p>
+                <p>{{time}}</p>
+            </div>
+        </div>
+    </div>
+</script>
+<script src="/javascripts/jquery.js"></script>
+<script src="/javascripts/handlebars-v4.0.11.js"></script>
+<script src="/javascripts/bootstrap.min.js"></script>
+<script src="/javascripts/jquery.raty.js"></script>
+<script src="/javascripts/vote.js"></script>
